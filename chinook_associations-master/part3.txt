@@ -1,0 +1,28 @@
+1.
+
+ a = Album.where(title: "Vinicius De Moraes")
+ a.first.tracks.pluck(:name)
+
+ 2.
+ a = Artist.where(name: "Philip Glass Ensemble")
+ a.first.albums.pluck(:title)
+
+3.
+p = Playlist.where(name: "Brazilian Music")
+p.first.tracks.all
+
+4.
+
+jazz = Genre.where(name: "Jazz")
+jazz.first.tracks.pluck(:name)
+
+5.
+
+t = Track.where(name: "My Time After Awhile")
+t.first.genre.name
+
+6.
+t.first.media_type
+
+7.
+t.first.album
